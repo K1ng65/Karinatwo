@@ -40,5 +40,5 @@ exports.run = async (bot, message) => {
       message.channel.send('Um erro aconteceu! \n' + err).catch();
     }
   message.delete().catch(O_o => {});
-console.log(`comando fox/banlist usado`);
+console.log(`comando f/banlist usado`);
 }

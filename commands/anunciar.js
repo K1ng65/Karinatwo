@@ -1,7 +1,4 @@
 const Discord = require('discord.js')
-const Database = require("@replit/database")
-const db = new Database()
-
 
 exports.run = async (bot, message, argumentos, arg_texto, chat) => {
     
@@ -31,8 +28,7 @@ exports.run = async (bot, message, argumentos, arg_texto, chat) => {
                   let anunciar = new Discord.MessageEmbed()
                     .setColor('RED')
                     .setTitle(title)
-                    .setDescription(desc)
-                    .setFooter("Anúncio feito por: "+message.author.username, message.author.displayAvatarURL({size: 32}))
+                    .setDescription(`${desc} \n - atenciosamente ${message.author}`)
                   
                 bot.channels.cache.get(channel.id).send(anunciar)  
                   
@@ -46,5 +42,4 @@ exports.run = async (bot, message, argumentos, arg_texto, chat) => {
        })  
       })
 
-console.log(`comando fox/anunciar usado`);
 }

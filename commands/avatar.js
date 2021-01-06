@@ -8,10 +8,11 @@ exports.run = async (client, message, args) => {
 
   let embed = new Discord.MessageEmbed() 
     .setColor(`#4cd8b2`) 
-    .setTitle(`Avatar de ${user.username}`) 
+    .setTitle(`Avatar de ${user.username}`)
+    .setDescription(`[clique aqui para baixa-la!](`+ (avatar)+`)`)
     .setImage(avatar) 
     .setFooter(`• Autor: ${message.author.tag}`, message.author.displayAvatarURL({format: "png"}));
  await message.channel.send(embed); 
 
-console.log(`comando fox/avatar usado`);
+console.log(`comando f/avatar usado`);
 };

@@ -34,5 +34,5 @@ let avatar = message.author.displayAvatarURL({format: 'png'});
         .setAuthor(message.author.tag, avatar);
   await message.channel.send(embed);
 message.delete().catch(O_o => {});
-console.log(`comando fox/dancar usado`);
+console.log(`comando f/dancar usado`);
 }

@@ -1,16 +1,16 @@
 const Discord = require('discord.js');
 
 module.exports.run = async (bot, message, args) => {
-    try{
-    if(!args[0]) {
-      return message.channel.send("escreva algo, pave gelado -_-")
+  try {
+      if (!args[0]) return message.reply('Você precisa inserir o texto para reverter!');
+      
+      const str = args.join(' ');
+      let msg = await message.channel.send(str.split('').reverse().join(''));
+      msg.react('🔁');
+    } catch (err) {
+      message.channel.send('Aconteceu um erro!\n' + err).catch();
     }
-    let str = args.join(' ')
-    let msg = str.split(' ').reverse(' ').join(' ')
-    message.channel.send(msg)
-  } catch(e) {
-    message.channel.send("deu erro" +e)
-  } 
+  
 message.delete().catch(O_o => {});
-console.log(`comando fox/inverter usado`);
-}
+console.log(`comando f/inverter usado`);
+};

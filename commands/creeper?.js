@@ -12,7 +12,7 @@ var list = [
   'vou testar minha nova flexa nele!',
   'AAAAAHH!!!!!!!!!! E SO JOGAR UMA TNT NELE!!',
   'AWWW MEN!!!!!!!!!!!!!!!',
-  'ja sei!... vou asar um bolo!',
+  'ja sei!... vou assar um bolo!',
   'mano :V',
   ':V'
 ];
@@ -20,5 +20,5 @@ var rand = list[Math.floor(Math.random() * list.length)];
 let user = message.mentions.users.first() || client.users.cache.get(args[0]);
 
 message.channel.send(rand);
-console.log(`comando fox/creeper? usado`);
+console.log(`comando f/creeper? usado`);
 }

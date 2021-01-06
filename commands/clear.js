@@ -18,7 +18,7 @@ exports.run = async (client, message, args) => {
   message.channel
     .send(`**${args[0]} mensagens limpas nesse chat!**`).then(msg => msg.delete({ timeout: 5000 }))
     .catch(error =>
-      console.log(`DEU ERRO!!!, devido a: ${error}`)
+      message.channel.send(`DEU ERRO!!!, devido a: ${error}`)
     );
-  console.log(`comando fox/clear usado`);
+  console.log(`comando f/clear usado`);
 };

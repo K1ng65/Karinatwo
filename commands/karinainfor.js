@@ -18,29 +18,25 @@ module.exports.run = async (client, message, args) => {
     text: "obrigada por ter me adicionado ao seu servidor! reaja em 📚 para mais informações"
   },
   author: {
-    name: "desenvolvida por: Zelferry bunny#1171",
-    url: "https://www.youtube.com/channel/UC4CgPExGInOXTLUsZdda7ew?view_as=subscriber"
+    name: "clique aqui para entrar em meu servidor de suporte/do canal do meu criador",
+    url: "https://discord.gg/vXw72rF8qT"
   },
   fields: [
     {
       name: "linguagem ",
-      value: "fui feita usando a linguagem de programação JS<:js:753288738200879125>  \neu usso a livraria do [discord.js](https://discord.js.org/#/)<:djs:753290059192467598> \n sou progamada no [repl.it](https://repl.it/)<:replit:753296246202171474> "
+      value: "fui feita usando a linguagem de programação JS \neu usso a livraria do [discord.js](https://discord.js.org/#/)\n sou progamada no [repl.it](https://repl.it/)"
     },
     {
       name: "tempo de atividade(tempo que estou online) ",
       value: `${uptime}`
     },
     {
-      name: "servidor de suporte",
-      value: `oi  ${message.author} entre no meu servidor de suporte na discord e saiba mais coisas sobre mim e etc!! \n \n [clique aqui para entrar no meu servidor de suporte](https://discord.gg/KFDHcVH)`
-    },
-    {
       name: "estou em..",
-      value: `${client.guilds.cache.size} servidores!\n${client.channels.cache.size} canais de texto!\n e estou jogando com ${client.users.cache.size} de membros!`
+      value: `${client.guilds.cache.size} servidores!\n${client.channels.cache.size} canais de texto!`
     },
     {
       name: "fui criada no dia..",
-      value: "14/08/2020"
+      value: "29/12/2020"
     }
   ]
 }}).then(msg => {
@@ -55,7 +51,7 @@ module.exports.run = async (client, message, args) => {
  infos.on('collect', r2 => {
   message.channel.send({embed: {
   color: 3447003,
-  description: `🎚️ |Latência da API: **${Math.round(client.ws.ping)}ms** \n\n <:js:753288738200879125> |versão da livraria discord.js: **V12** \n\n <:eta_preuga:748289174691512330> | versão da karina: **1.2.0** \n\n 💜| meu amor por frango frango frito e por vocês: **INFINITO**`
+  description: `🎚️ |Latência da API: **${Math.round(client.ws.ping)}ms** \n\n<:JS:795642149826986025> |versão da livraria discord.js: **V12** \n\n 🐺| versão da karina: **3.2.1** \n\n 💜| meu amor por frango frango frito e por vocês: **INFINITO**`
 }}); 
  })
 })

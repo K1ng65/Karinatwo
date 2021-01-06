@@ -5,11 +5,11 @@ message.delete();
 const content = args.join(" ");
 
 if (!args[0]) {
-  return message.channel.send(`${message.author.username}, escreva a sugestão após o comando`)
+  return message.channel.send(`${message.author.username}, escreva o relatorio após o comando`)
 } else if (content.length > 1000) {
-  return message.channel.send(`${message.author.username}, forneça uma sugestão de no máximo 1000 caracteres.`);
+  return message.channel.send(`${message.author.username}, forneça um relatorio de no máximo 1000 caracteres.`);
 } else {
-  const hook = new Discord.WebhookClient('753628219604729986', 'M86WnjXVdvh7SfAv2CMs0E1VB6pscAvuar-PNZDvwDLZYxTEg8Kfpr_jW5lSym9d4Ttp');
+  const hook = new Discord.WebhookClient('793854991243804744','EkkzNb-kY_pg2fCk1HECDHp7ny-qX5GN2hllYH6VkEDKNbKfPpQP-dNIiyAtrjukM9mw');
   hook.send(
     new Discord.MessageEmbed()
     .setColor("#FFFFF1")
@@ -19,7 +19,7 @@ if (!args[0]) {
   );
   await message.channel.send({embed: {
   color: 3547013,
-  description: `${message.author} seu suporte foi \n enviado com suseso!`
+  description: `${message.author} relatorio enviado com suseso no meu servidor de suporte!`
 }}).then(msg => msg.delete({ timeout: 5000 }))
 
   

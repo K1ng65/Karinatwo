@@ -1,34 +1,66 @@
 const Discord = require('discord.js');
 
 module.exports.run = async (client, message, args) => {
-  message.channel.send({embed: {
-    color: 13893887,
-    author: {
-      name: client.user.username,
-      icon_url: client.user.avatarURL
+
+    let db = require('megadb')
+
+    let PrefixDB = new db.crearDB("Prefix");
+
+    if (!PrefixDB.tiene(`${message.guild.id}`))
+    PrefixDB.establecer(`${message.guild.id}`, {
+      name: message.guild.name,
+      owner: message.guild.owner.user.id,
+      prefix: "f/"
+    });
+
+    let prefixoAtual = await PrefixDB.obtener(`${message.guild.id}.prefix`);
+
+
+const embed = {
+  "title": "Minha lista de comandos!",
+  "description": "Meu prefixo nesse servidor: `"+prefixoAtual+"`",
+  "color": 11993343,
+  "fields": [
+    {
+      "name": "😹》diversão",
+      "value": "`coin`,`kiss`,`say`,`avatar`,`atack`,`ping`,`slap`,`emoji`,`inverter`,`idiot`,`qi`,`dancar`,`dino`,`hug`,`morse`"
     },
-    title: "presisa de ajuda e de suporte, então...",
-    description: "fui criada pelo [__zeferry__](https://www.youtube.com/channel/UC4CgPExGInOXTLUsZdda7ew?view_as=subscriber) para deixar seu servidor mais ativo como nunca!!, mais e claro meus comandos  são muito difíceis de memorizar :p abaixo esta meu site para ver meus comandos",
-    fields: [{
-        name: "🤔|assese meu site e veja meus comandos!",
-        value: "[clique aqui para asesar meu site](https://zelferrybrburryofi.wixsite.com/karinabot/comandos)"
-      },
-      {
-        name: "💾| quer da dicas de comandos? fale com o zelfery no telegram!",
-        value: "[clique aqui para entrar em suporte.](https://t.me/Zelferry)\n"
-      },
-      {
-        name: "se presisar novamente...",
-        value: "dijite fox/help para saber dos meus comandos novamente"
-      }
-    ],
-    timestamp: new Date(),
-    footer: {
-      icon_url: client.user.avatarURL,
-      text: "©karina BOT todos os direitos resevardos"
+    {
+      "name": "📷》fotoshop",
+      "value": "`triggered`,`affect`,`beautiful`,`changemymind`,`invert`,`fuse`"
+    },
+    {
+      "name": "👮》administração",
+      "value": "`anunciar`,`banlist`,`clear`,`create-rules`,`setprefix`,`locklink`"
+    },
+    {
+      "name": "📲》discord",
+      "value": "`convidar`,`karinainfor`"
+    },
+    {
+      "name": "💎》minecraft",
+      "value": "`CREEPER?`"
+    },
+    {
+      "name": "💩》memes",
+      "value": "`meme`,`gerarmeme`"
+    },
+    {
+      "name": "💳》econômica",
+      "value": "`furcoins`,`daily`,`work`,`roll`,`vip`,`pay`,`buy`,`open`"
+    },
+    {
+      "name": "↪》miscelânea",
+      "value": "`karina-oc`,`lembrete`,`pitaya`,`furry`"
+    },
+    {
+      "name": "😈》nsfw",
+      "value": "`nsfw`,`gay`"
     }
-  }
-});
+  ]
+};
+message.channel.send({ embed });
+  
 message.delete().catch(O_o => {});
 console.log(`um usuario pediu ajuda`);
 }

@@ -113,5 +113,5 @@ message.channel.send({embed: {
   description: `sua idiotice e de **` + (rand) + `**`
 }});
 
-console.log(`comando fox/idiot usado`);
+console.log(`comando f/idiot usado`);
 }
