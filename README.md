@@ -4,6 +4,7 @@
 oi sou o zel e perdi minha conta :(
 essa n e so minha nova conta como tb a nova karina!!
 
+[clique aqui](https://discord.com/oauth2/authorize?client_id=793530706319114261&scope=bot&permissions=2081422591) para adiconar a KarinaTwo!!
 
 ## funcionalidades
 
